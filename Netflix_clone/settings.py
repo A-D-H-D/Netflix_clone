@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'core'
+
 ]
 
 MIDDLEWARE = [
@@ -73,16 +75,29 @@ WSGI_APPLICATION = 'Netflix_clone.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# settings.py
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'database',
-        'USER': 'fl0user',
-        'PASSWORD': 'IWJo9EKmrLP5',
-        'HOST': 'ep-orange-glitter-a1iq1itc.ap-southeast-1.aws.neon.fl0.io',
-        'PORT': '5432'
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Netflix_clone',     # Name of your database
+        'USER': 'postgres',          # PostgreSQL username
+        'PASSWORD': 'obiwan',        # PostgreSQL password
+        'HOST': 'localhost',         # Assuming your database is running locally
+        'PORT': '5432',              # Default PostgreSQL port
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'database',
+#         'USER': 'fl0user',
+#         'PASSWORD': 'IWJo9EKmrLP5',
+#         'HOST': 'ep-orange-glitter-a1iq1itc.ap-southeast-1.aws.neon.fl0.io',
+#         'PORT': '5432'
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
